@@ -8,6 +8,14 @@ const connect = function () {
 
   conn.setEncoding("utf8");
 
+  // Event handler for "connect" event
+  conn.on("connect", () => {
+    console.log("Successfully connected to game server");
+    // Send your name to the server
+    conn.write("Name: AAA"); // Replace "XYZ" with your initials
+  });
+
+
   return conn;
 };
 
