@@ -8,30 +8,26 @@ const connect = function () {
 
   conn.setEncoding("utf8");
 
-  // Event handler for "connect" event
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
-    // Send your name to the server
-    conn.write("Name: AAA"); // Replace "XYZ" with your initials
+    conn.write("Name: AAA"); // Replace "AAA" with your initials
 
-    // Send move commands to the server
-    // Move up
-    conn.write("Move: up");
+    // Sending Move commands for testing
+    setTimeout(() => {
+      conn.write("Move: up");
+    }, 1000);
 
-    // Move down after a delay
     setTimeout(() => {
       conn.write("Move: down");
-    }, 1000); // Delay of 1000ms (1 second)
+    }, 2000);
 
-    // Move right after a longer delay
     setTimeout(() => {
       conn.write("Move: right");
-    }, 2000); // Delay of 2000ms (2 seconds)
+    }, 3000);
 
-    // Move left after an even longer delay
     setTimeout(() => {
       conn.write("Move: left");
-    }, 3000); // Delay of 3000ms (3 seconds)
+    }, 4000);
   });
 
   return conn;
