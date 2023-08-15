@@ -28,6 +28,9 @@ connectToServer();
 
 const { connect } = require("./client");
 
+const { setupInput } = require("./input");
+
+
 const connection = connect(); // This line now uses the imported connect function
 
 // Setup user input handling
