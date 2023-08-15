@@ -26,3 +26,6 @@ const connect = function () {
 
 console.log("Connecting ...");
 connect();
+
+const { connect } = require("./client");
+
