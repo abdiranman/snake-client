@@ -1,7 +1,7 @@
 const net = require("net");
 
 // establishes a connection with the game server
-const connect = function () {
+const connectToServer = function () {
   const conn = net.createConnection({
     host: "localhost",
     port: 50541,
@@ -20,12 +20,12 @@ const connect = function () {
     console.log("Connected to server");
   });
 
-
   return conn;
 };
 
 console.log("Connecting ...");
-connect();
+connectToServer();
 
 const { connect } = require("./client");
 
+const connection = connect(); // This line now uses the imported connect function
