@@ -6,7 +6,7 @@ Before running this client, make sure the server side is running by following th
 
 ## Server Repository
 
-[Snake Server Repository](https://github.com/abdiranman/snek-multiplayer-server)
+[Snake Server Repository]https://github.com/abdiranman/snake-client
 
 ## Getting Started
 
